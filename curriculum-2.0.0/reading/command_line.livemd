@@ -30,29 +30,27 @@ Mix.install([
 </div>
 </div>
 
-## Review Questions
+## Perguntas de Revisão
 
-Upon completing this lesson, a student should be able to answer the following questions.
+Ao completar esta lição, um estudante deve ser capaz de responder às seguintes perguntas:
 
-* How do you use your command line to navigate the file system?
-* How do you use your command line to manipulate (create and remove) folders and files?
+* Como você usa a linha de comando para navegar no sistema de arquivos?
+* Como você usa a linha de comando para manipular (criar e remover) pastas e arquivos?
 
-## Overview
+## Visão Geral
 
-We use the command line to interact with our computer through a text interface rather than through a Graphical User Interface (GUI).
+Usamos a linha de comando para interagir com nosso computador através de uma interface de texto, em vez de uma Interface Gráfica do Usuário (GUI).
 
-Many programs only run through the command line. Generally, we call these **Command-Line Applications**, **CLI Applications** (for Command Line Interface), or just **CLIs**.
+Muitos programas só funcionam através da linha de comando. Geralmente, chamamos esses de **Aplicações de Linha de Comando**, **Aplicações CLI** (para Interface de Linha de Comando), ou apenas **CLIs**.
 
-The command line will differ depending on your operating system (Windows, macOS, GNU/Linux). Thus, we will include the commands
-specific instructions for each operating system.
+A linha de comando será diferente dependendo do seu sistema operacional (Windows, macOS, GNU/Linux). Assim, incluiremos os comandos instruções específicas para cada sistema operacional.
 
-Each operating system uses a different program for its command line. Follow the instructions for your operating system to open your command line.
+Cada sistema operacional usa um programa diferente para sua linha de comando. Siga as instruções para o seu sistema operacional para abrir a sua linha de comando.
 
-* **Windows**: Open the start menu with the <kbd>Win <i class="ri-windows-fill"></i></kbd> key. Search for Command Prompt. Ensure you run in administrator mode to avoid permission issues.
-* **macOS or GNU/Linux**: Open the Terminal App <kbd>Ctrl+Alt+T</kbd>
-* **macOS** Click the Launchpad icon in the Dock or open the Launchpad with <kbd>Command + Space</kbd>. Type Terminal in the search field, then click the Terminal program.
-
-For an overview of the Command-Line Interface, we recommend this excellent video by Crash Course Computer Science.
+* **Windows**: Abra o menu iniciar com a tecla <kbd>Win <i class="ri-windows-fill"></i></kbd>. Procure por Prompt de Comando. Certifique-se de executar no modo administrador para evitar problemas de permissão.
+* **macOS ou GNU/Linux**: Abra o aplicativo Terminal <kbd>Ctrl+Alt+T</kbd>
+* **macOS** Clique no ícone do Launchpad no Dock ou abra o Launchpad com <kbd>Command + Space</kbd>. Digite Terminal no campo de pesquisa, depois clique no programa Terminal.
+  Para uma visão geral da Interface de Linha de Comando, recomendamos este excelente vídeo do Crash Course Computer Science.
 
 <!-- livebook:{"attrs":"eyJzb3VyY2UiOiJZb3VUdWJlLm5ldyhcImh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9NFJQdEo5VXlIUzBcIikiLCJ0aXRsZSI6IkNvbW1hbmQgTGluZSBJbnRlcmZhY2VzIn0","chunks":null,"kind":"Elixir.HiddenCell","livebook_object":"smart_cell"} -->
 
@@ -60,194 +58,191 @@ For an overview of the Command-Line Interface, we recommend this excellent video
 YouTube.new("https://www.youtube.com/watch?v=4RPtJ9UyHS0")
 ```
 
-### Current Working Directory
+### Diretório de Trabalho Atual
 
-Your command line should display the **current working directory**. You'll often see `$` represent
-the current working directory in tutorials. Omit the `$` when entering text into your command line.
+Sua linha de comando deve exibir o diretório de trabalho atual. Você frequentemente verá `$`  representando o diretório de trabalho atual em tutoriais. Omita o `$` ao inserir texto na sua linha de comando.
 
-For example, on Windows 11, mine is:
+Por exemplo, no Windows 11, o meu é:
 
 ```sh
 C:\Users\brook>
 ```
 
-### Your Turn
+### Sua Vez
 
-Open the command line on your computer and enter the `whoami` command to see your current user.
+Abra a linha de comando no seu computador e digite o comando `whoami` para ver o seu usuário atual.
 
-You should see a similar output.
+Você deve ver uma saída semelhante.
 
 ```sh
 $ whoami
-your_user_name
+seu_nome_de_usuário
 ```
 
-## Running Elixir Files
+## Executando arquivos Elixir
 
-With [Elixir installed](https://elixir-lang.org/install.html) we can use the command line to execute an Elixir file ending in `.ex` or `.exs`.
+Com o [Elixir instalado](https://elixir-lang.org/install.html), podemos usar a linha de comando para executar um arquivo Elixir terminado em `.ex` ou `.exs`.
 
-Elixir treats both file extensions similarly. However, we generally use `.exs` files for scripts.
+O Elixir trata ambas as extensões de arquivo de maneira semelhante. No entanto, geralmente usamos arquivos `.exs` para scripts.
 
-Let's create an Elixir script. First, create a `script.exs` file with the following content. This prints a `"Hello, world!"` message in your console.
+Vamos criar um script Elixir. Primeiro, crie um arquivo `script.exs` com o seguinte conteúdo. Isso imprime uma mensagem `"Olá, mundo!"` no seu console.
 
 <!-- livebook:{"force_markdown":true} -->
 
 ```elixir
-IO.puts("Hello, world!")
+IO.puts("Hello, World!")
 ```
 
-Then execute the file from the command line. Any Elixir code inside of the file will execute.
+Em seguida, execute o arquivo a partir da linha de comando. Qualquer código Elixir dentro do arquivo será executado.
 
 ```
 $ elixir script.ex
-Hello, world!
+Hello, World!
 ```
 
-## Permissions (sudo)
+## Permissões (sudo)
 
-Some commands require permissions to enter. You should see an error in the command line
-if the command requires permissions.
+Alguns comandos requerem permissões para executar. Você deve ver um erro na linha de comando
+se o comando requer permissões.
 
-In **Windows** you often need to run the Command Prompt
-or Powershell in administrator mode.
+No **Windows**, você geralmente precisa executar o Prompt de Comando ou Powershell no modo administrador.
 
-For **macOS & GNU/Linux** you can preface commands with **sudo**. You'll be prompted for your computer's
-password. You'll notice that `whoami` returns a different value (probably `root`).
+Para **macOS & GNU/Linux**, você pode anteceder comandos com **sudo**. Você será solicitado a digitar a senha do seu computador. Você notará que `whoami` retorna um valor diferente (provavelmente `root`).
 
-Root is the superuser account in macOS and GNU/Linux.
+Root é a conta de superusuário no macOS e GNU/Linux.
 
 ```sh
 $ sudo whoami
 root
 ```
 
-## List Files & Folders
+## Listar Arquivos & Pastas
 
-Our computer stores **files** and **folders**. The terms **folder** and **directory** are interchangeable.
+Nosso computador armazena **arquivos** e **pastas**. Os termos **pasta** e **diretório** são intercambiáveis.
 
-We use the following commands to list files and folders.
+Usamos os seguintes comandos para listar arquivos e pastas.
 
 * **Windows**: `dir`
-* **macOS or GNU/Linux**: `ls`
+* **macOS ou GNU/Linux**: `ls`
 
-macOS and GNU/Linux hide specific files. For example, files
-starting with `.` are automatically hidden.
+macOS e GNU/Linux escondem arquivos específicos. Por exemplo, arquivos
+que começam com `.` são automaticamente ocultados.
 
-You can see hidden files with `ls -a`.
+Você pode ver arquivos ocultos com `ls -a`.
 
 ```sh
 $ ls -a
 ```
 
-On **Windows**, all files and folders should display by default.
+No **Windows**, todos os arquivos e pastas devem ser exibidos por padrão.
 
 ```sh
 C:\> dir
 ```
 
-### Your Turn
+### Sua Vez
 
-Use the command line the files and folders in the current working directory. If you are
-on macOS or GNU/Linux, use both `ls` and `ls -a` to see the difference.
+Use a linha de comando para listar os arquivos e pastas no diretório de trabalho atual. Se você estiver
+no macOS ou GNU/Linux, use tanto `ls` quanto `ls -a` para ver a diferença.
 
-## Create Files
+## Criar Arquivos
 
-You can create a file using the following commands
+Você pode criar um arquivo usando os seguintes comandos:
 
 * **macOS & GNU/Linux**: `touch`
 * **Windows**: `echo`
 
-**macOS & GNU/Linux** Allow you to enter `touch` with the name of a file.
+**macOS & GNU/Linux** permitem que você insira `touch` com o nome de um arquivo.
 
 ```sh
 $ touch ./example_file.txt
 ```
 
-**Windows** requires you to enter the content into (`>`) the file.
+**Windows** requer que você insira o conteúdo em (`>`) o arquivo.
 
 ```sh
-C:\> echo example content > ./example_file.txt
+C:\> echo exemplo de conteúdo > ./example_file.txt
 ```
 
-On **Windows**, you can use `type nul` to create an empty file.
+No **Windows**, você pode usar `type nul` para criar um arquivo vazio.
 
 ```sh
 C:\> echo type nul > ./example_file.txt
 ```
 
-`./` represents the current working directory. You can generally omit it.
+`./` representa o diretório de trabalho atual. Você geralmente pode omiti-lo.
 
-Here are the same commands without the `./`.
+Aqui estão os mesmos comandos sem o `./`.
 
 ```sh
 $ touch example_file.txt
-$ echo example content > example_file.txt
+$ echo exemplo de conteúdo > example_file.txt
 ```
 
-### Your Turn
+### Sua Vez
 
-Using the command line, create a file called `test.txt`.
+Usando a linha de comando, crie um arquivo chamado `test.txt`.
 
-On **macOS & GNU/Linux** run:
+No **macOS & GNU/Linux** execute:
 
 ```sh
 $ touch test.txt
 ```
 
-On **Windows** run:
+No **Windows** execute:
 
 ```sh
 C:\> type nul > text.txt
 ```
 
-## Create Folders
+## Criar Pastas
 
-You can create a folder with `mkdir` on every operating system. It's short for **make directory**.
+Você pode criar uma pasta com `mkdir` em todos os sistemas operacionais. É uma abreviação para **make directory**.
 
-### Your Turn
+### Sua Vez
 
-Using the command line, create an `example` folder using `mkdir`.
+Usando a linha de comando, crie uma pasta `example` usando `mkdir`.
 
 ```sh
 $ mkdir example
 ```
 
-Then use the command line
-to create a file called `in_example.txt` inside of the `example` folder.
+Em seguida, use a linha de comando
+para criar um arquivo chamado `in_example.txt` dentro da pasta `example`.
 
-On **macOS or GNU/Linux**, enter:
+No **macOS ou GNU/Linux**, insira:
 
 ```sh
 $ touch example/in_example.txt
 ```
 
-On **Windows** enter:
+No **Windows** insira:
 
 ```sh
 C:\> echo type nul > example/in_example.txt
 ```
 
-## Navigating The File System
+## Navegando no Sistema de Arquivos
 
-You can navigate the file system with `cd` on every operating system.
+Você pode navegar no sistema de arquivos com `cd` em todos os sistemas operacionais.
 
-You navigate through files and folders the same way you would click through the file explorer.
+Você navega por arquivos e pastas da mesma maneira que clicaria no explorador de arquivos.
 
-Enter `cd` with the path of the folder to navigate to it. The folder must exist.
+Insira `cd` com o caminho da pasta para navegar até ela. A pasta deve existir.
 
 ```sh
 $ cd example_folder
 $ cd first_folder/second_folder/third_folder
 ```
 
-You can navigate up folders using `../`. You can go up any number of folders by repeating `../`.
+Você pode navegar para pastas superiores usando `../`. Você pode subir qualquer número de pastas repetindo `../`.
 
 ```sh
 $ cd ../
 $ cd ../../../
 ```
 
-Let's walk through an example with several nested folders like so.
+Vamos percorrer um exemplo com várias pastas aninhadas assim.
 
 ```sh
 /top
@@ -261,7 +256,7 @@ Let's walk through an example with several nested folders like so.
 
 <!-- livebook:{"break_markdown":true} -->
 
-We use `cd` to navigate between these folders and set the current working directory.
+Usamos `cd` para navegar entre essas pastas e definir o diretório de trabalho atual.
 
 <!-- livebook:{"break_markdown":true} -->
 
@@ -272,7 +267,7 @@ top --> folder_a --> folder_b --> folder_c
 style top fill:lightgreen
 ```
 
-For example, we can `cd folder_1/folder_2/` to set the current working directory to `folder_2`.
+Por exemplo, podemos `cd folder_1/folder_2/` para definir o diretório de trabalho atual como `folder_2`.
 
 <!-- livebook:{"break_markdown":true} -->
 
@@ -285,7 +280,7 @@ style folder_2 fill:lightgreen
 
 <!-- livebook:{"break_markdown":true} -->
 
-And use `cd ../../folder_a/folder_b/folder_c` to set the current working directory to `folder_c`.
+E use `cd ../../folder_a/folder_b/folder_c` para definir o diretório de trabalho atual como `folder_c`.
 
 <!-- livebook:{"break_markdown":true} -->
 
@@ -298,162 +293,162 @@ style folder_c fill:lightgreen
 
 <!-- livebook:{"break_markdown":true} -->
 
-### Your Turn
+### Sua Vez
 
-Using the command line, go into the `example` folder you created earlier. List all of the files in the folder using `ls` or `dir`. You should
-see the `in_example.txt` file from the previous exercise.
+Usando a linha de comando, entre na pasta `example` que você criou anteriormente. Liste todos os arquivos na pasta usando `ls` ou `dir`. Você deve
+ver o arquivo `in_example.txt` do exercício anterior.
 
 ```sh
 $ cd example
 ```
 
-## Remove Files
+## Remover Arquivos
 
-You can remove files using the following commands.
+Você pode remover arquivos usando os seguintes comandos.
 
 * **macOS & GNU/Linux**: `rm`
 * **Windows**: `del`
 
 <!-- livebook:{"break_markdown":true} -->
 
-### Your Turn
+### Sua Vez
 
-Using the command line, delete the `in_example.txt` file from the previous exercise.
+Usando a linha de comando, delete o arquivo `in_example.txt` do exercício anterior.
 
-On **macOS & GNU/Linux** run:
+No **macOS & GNU/Linux** execute:
 
 ```sh
 $ rm example/in_example.txt
 ```
 
-On **Windows** run:
+No **Windows** execute:
 
 ```sh
 C:\> del example/in_example.txt
 ```
 
-## Remove Folders
+## Remover Pastas
 
-You can remove folders using the following commands.
+Você pode remover pastas usando os seguintes comandos.
 
 * **macOS & GNU/Linux**: `rm -rf`
 * **Windows**: `rmdir`
 
-### Your Turn
+### Sua Vez
 
-Remove the `example` folder from the previous exercise.
+Remova a pasta `example` do exercício anterior.
 
-On **macOS & GNU/Linux** run:
+No **macOS & GNU/Linux** execute:
 
 ```sh
 $ rm -rf example
 ```
 
-On **Windows** run:
+No **Windows** execute:
 
 ```sh
 C:\> rmdir example
 ```
 
-## Reading Files
+## Lendo Arquivos
 
-You can read file contents with the following commands.
+Você pode ler o conteúdo dos arquivos com os seguintes comandos.
 
 * **macOS & GNU/Linux**: `cat`
 * **Windows**: `type`.
 
-### Your Turn
+### Sua Vez
 
-Create a new file `read_example.txt` with some text content.
-You can use `echo` on every operating system to create a file with some content. However,
-`type nul` only works on **Windows**.
+Crie um novo arquivo `read_example.txt` com algum conteúdo de texto.
+Você pode usar `echo` em todos os sistemas operacionais para criar um arquivo com algum conteúdo. No entanto,
+`type nul` só funciona no **Windows**.
 
-run:
+execute:
 
 ```sh
-$ echo content > read_example.txt
+$ echo conteúdo > read_example.txt
 ```
 
-Then read the content.
+Em seguida, leia o conteúdo.
 
-On **macOS & GNU/Linux** run:
+No **macOS & GNU/Linux** execute:
 
 ```sh
 $ cat read_example.txt
 ```
 
-On **Windows** run:
+No **Windows** execute:
 
 ```sh
 C:\> type read_example.txt
 ```
 
-## Tab Completion
+## Autocompletar com Tab
 
-To save time, you can generally use the <kbd>Tab</kbd> button to autocomplete a command or filename.
+Para economizar tempo, você geralmente pode usar o botão <kbd>Tab</kbd> para autocompletar um comando ou nome de arquivo.
 
-### Your Turn
+### Sua Vez
 
-Using the command line, create a new folder called `tab_to_folder`.
+Usando a linha de comando, crie uma nova pasta chamada `tab_to_folder`.
 
 ```sh
 $ mkdir tab_to_folder
 ```
 
-Navigate to the folder using autocompletion. Start typing `tab` then use the <kbd>Tab</kbd> key to autocomplete the folder name.
+Navegue até a pasta usando a autocompleção. Comece digitando `tab` e então use a tecla <kbd>Tab</kbd> para autocompletar o nome da pasta.
 
 ```sh
 $ cd tab_to_folder
 ```
 
-## With Great Power
+## Com Grande Poder
 
-The command line is powerful. Therefore the command line is
-also dangerous. For example, a simple command can delete every file on your computer.
+A linha de comando é poderosa. Portanto, a linha de comando é
+também perigosa. Por exemplo, um simples comando pode deletar todos os arquivos do seu computador.
 
-Open the dropdown below to see the command. You should **never** run it.
+Abra o dropdown abaixo para ver o comando. Você nunca deve executá-lo.
 
 <details style="background-color: lightcoral; color: white; padding: 1rem;">
-<summary>DANGER DO NOT RUN</summary>
+<summary>PERIGO NÃO EXECUTE</summary>
 rm -rf *
 </details>
 
-So be careful about running commands on your command line.
+Então, tenha cuidado ao executar comandos na sua linha de comando.
 
-## Summary
+## Resumo
 
-This lesson is a brief primer on the command line. Here's a quick summary of the key takeaways.
+Esta lição é uma breve introdução à linha de comando. Aqui está um rápido resumo dos principais pontos.
 
 <!-- livebook:{"break_markdown":true} -->
 
 **macOS & GNU/Linux**
 
-* list files and folders: `ls` and `ls -a`.
-* create files: `touch`.
-* create folders: `mkdir`.
-* navigate: `cd`.
-* remove files: `rm`.
-* remove folders: `rm -rf`.
-* read file contents: `cat`.
+* listar arquivos e pastas: `ls` e `ls -a`.
+* criar arquivos: `touch`.
+* criar pastas: `mkdir`.
+* navegar: `cd`.
+* remover arquivos: `rm`.
+* remover pastas: `rm -rf`.
+* ler conteúdo de arquivos: `cat`.
 
 **Windows**
 
-* list files and folders: `dir`.
-* create files: `echo`.
-* create folders: `mkdir`.
-* navigate: `cd`.
-* remove files: `del`.
-* remove folders: `rmdir`.
-* read file contents: `type`.
+* listar arquivos e pastas: `dir`.
+* criar arquivos: `echo`.
+* criar pastas: `mkdir`.
+* navegar: `cd`.
+* remover arquivos: `del`.
+* remover pastas: `rmdir`.
+* ler conteúdo de arquivos: `type`.
 
-You can now handle everyday command-line tasks! Expect to learn more about the command line as you encounter more programming challenges.
+Agora você pode lidar com tarefas diárias da linha de comando! Espere aprender mais sobre a linha de comando à medida que você encontra mais desafios de programação.
 
-## Commit Your Progress
+## Registre Seu Progresso
 
-DockYard Academy now recommends you use the latest [Release](https://github.com/DockYard-Academy/curriculum/releases) rather than forking or cloning our repository.
+A DockYard Academy agora recomenda que você use a última [Versão](https://github.com/DockYard-Academy/curriculum/releases) em vez de fazer fork ou clonar nosso repositório.
 
-Run `git status` to ensure there are no undesirable changes.
-Then run the following in your command line from the `curriculum` folder to commit your progress.
+Execute `git status` para garantir que não haja alterações indesejáveis.
+Em seguida, execute o seguinte na sua linha de comando a partir da pasta `curriculum` para registrar seu progresso.
 
 ```
 $ git add .
@@ -461,10 +456,10 @@ $ git commit -m "finish Command Line reading"
 $ git push
 ```
 
-We're proud to offer our open-source curriculum free of charge for anyone to learn from at their own pace.
+Temos orgulho de oferecer nosso currículo de código aberto gratuitamente para qualquer pessoa aprender no seu próprio ritmo.
 
-We also offer a paid course where you can learn from an instructor alongside a cohort of your peers.
-We will accept applications for the June-August 2023 cohort soon.
+Também oferecemos um curso pago onde você pode aprender com um instrutor ao lado de um grupo de seus colegas.
+Aceitaremos inscrições para a turma de junho a agosto de 2023 em breve.
 
 ## Navigation
 
