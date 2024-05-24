@@ -30,85 +30,83 @@ Mix.install([
 </div>
 </div>
 
-## Overview
+## Visão Geral
 
-### Version Control
+### Controle de Versão
 
-Version control is a system that helps you track changes to your files over time. It allows you to save different versions of your work and collaborate with others efficiently. With version control, you can easily compare, revert, and merge changes, ensuring that you have a history of all modifications made to your project and enabling effective collaboration and backup of your code.
+O controle de versão é um sistema que ajuda você a rastrear as alterações em seus arquivos ao longo do tempo. Ele permite que você salve diferentes versões do seu trabalho e colabore com outras pessoas de maneira eficiente. Com o controle de versão, você pode facilmente comparar, reverter e mesclar alterações, garantindo que você tenha um histórico de todas as modificações feitas em seu projeto e permitindo uma colaboração eficaz e backup do seu código.
 
 <!-- livebook:{"break_markdown":true} -->
 
 ### Git
 
-Git is a widely used version control system that helps you keep track of changes made to your files.
+O Git é um sistema de controle de versão amplamente utilizado que ajuda você a acompanhar as alterações feitas em seus arquivos.
 
 <!-- livebook:{"break_markdown":true} -->
 
 ### GitHub
 
-GitHub is a web-based platform that provides hosting for software development and a community of developers to collaborate and contribute to open-source and closed-source projects. It is built on top of Git and provides a user-friendly interface for developers to manage their code.
+O GitHub é uma plataforma baseada na web que fornece hospedagem para desenvolvimento de software e uma comunidade de desenvolvedores para colaborar e contribuir para projetos de código aberto e fechado. Ele é construído em cima do Git e fornece uma interface amigável para os desenvolvedores gerenciarem seu código.
 
-GitHub provides several key features for developers, including:
+O GitHub fornece vários recursos-chave para os desenvolvedores, incluindo:
 
-* **Repositories**: Developers can create and host their code in individual "repositories" on GitHub, which can be easily shared and collaborated on with other developers. These repositories can be **public** or **private**.
-* **Collaboration**: Developers can easily collaborate on code by "forking" a repository, making changes, and then submitting those changes back to the original repository through a "pull request".
-* **Issues**: Developers can track and manage bugs, feature requests, and other tasks by creating "issues" within a repository.
-* **Pull requests (PRs)**: Developers can submit changes to a repository by creating a "pull request", which can be reviewed and approved by other members of the development team.
-* **Branching**: Developers can create and work on multiple branches of a repository, allowing them to work on different features or bug fixes without affecting the main codebase.
-* **Wiki**: Developers can create a wiki for their repository to provide documentation and other information about the codebase.
+* **Repositórios**: Os desenvolvedores podem criar e hospedar seu código em "repositórios" individuais no GitHub, que podem ser facilmente compartilhados e colaborados com outros desenvolvedores. Esses repositórios podem ser **públicos** ou **privados**.
+* **Colaboração**: Os desenvolvedores podem colaborar facilmente no código criando um "forking" (bifurcação) de um repositório, fazendo alterações e, em seguida, enviando essas alterações de volta ao repositório original por meio de um "pull request".
+* **Issues**: Os desenvolvedores podem rastrear e gerenciar bugs, solicitações de recursos e outras tarefas criando "issues" dentro de um repositório.
+* **Pull requests (PRs)**: Os desenvolvedores podem enviar alterações para um repositório criando um "pull request", que pode ser revisado e aprovado por outros membros da equipe de desenvolvimento.
+* **Branching**: Os desenvolvedores podem criar e trabalhar em várias branches de um repositório, permitindo que eles trabalhem em diferentes recursos ou correções de bugs sem afetar o código principal.
+* **Wiki**: Os desenvolvedores podem criar uma wiki para o seu repositório para fornecer documentação e outras informações sobre a base de código.
 
-With Git and GitHub, developers store a **local** version of their changes with git, and push those changes to a **remote** version on GitHub.
+Com o Git e o GitHub, os desenvolvedores armazenam uma versão **local** de suas alterações com o git e enviam essas alterações para uma versão **remota** no GitHub.
 
-## Install Git
+## Instalar o Git
 
-Git is a locally installed program on your computer. Git comes pre-installed on macOS and Linux operating systems. If you use Windows, you'll have to [Install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+O Git é um programa instalado localmente no seu computador. O Git vem pré-instalado nos sistemas operacionais macOS e Linux. Se você usa o Windows, terá que [Instalar o Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-Enter the following into the command line to confirm you have Git installed. You should see a similar output, but likely with a different git version.
+Digite o seguinte na linha de comando para confirmar que você tem o Git instalado. Você deve ver uma saída semelhante, mas provavelmente com uma versão diferente do git.
 
 ```sh
 $ git --version
 git version 2.25.1
 ```
 
-For sake of consistency with reading material and instruction in this course, we recommend using the command line for Git instead of a program such as GitHub Desktop.
+Para manter a consistência com o material de leitura e instrução neste curso, recomendamos o uso da linha de comando para o Git em vez de um programa como o GitHub Desktop.
 
-## Your Turn: Create A GitHub Account
+## Sua vez: Crie uma conta no GitHub
 
-[Create a GitHub Account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) if you have not already. You may also wish to setup [Setup SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) or some alternative authorization method so that you do not have to enter your credentials every time you interact with GitHub.
+[Crie uma conta no GitHub](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) se ainda não o fez. Você também pode querer configurar [Configurar SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) ou algum método de autorização alternativo para que você não precise inserir suas credenciais toda vez que interagir com o GitHub.
 
-## Raising An Issue
+## Levantando uma Issue
 
-Anyone can raise an issue on a public GitHub project. For example, you can [raise an issue](https://github.com/DockYard-Academy/curriculum/issues) by going to
-the issues tab on the [GitHub Page](https://github.com/DockYard-Academy/curriculum) of this curriculum and clicking **New Issue**.
+Qualquer pessoa pode levantar uma issue em um projeto público do GitHub. Por exemplo, você pode [levantar uma issue](https://github.com/DockYard-Academy/curriculum/issues) indo para a aba de issues na [Página do GitHub](https://github.com/DockYard-Academy/curriculum) deste currículo e clicando em **Nova Issue**.
 
-Please raise an issue or speak with your instructor if you encounter a problem with the curriculum.
+Por favor, levante uma issue ou fale com seu instrutor se encontrar um problema com o currículo.
 
-## Initializing A Local Repository
+## Inicializando um Repositório Local
 
-Git uses a `.git` folder that stores the necessary folders
-and files to manage the project's source control. We call this git-managed folder a **repository**.
+O Git usa uma pasta `.git` que armazena as pastas e arquivos necessários para gerenciar o controle de versão do projeto. Chamamos esta pasta gerenciada pelo git de **repositório**.
 
-Using the command line, you can initialize Git in your current working directory by running:
+Usando a linha de comando, você pode inicializar o Git no seu diretório de trabalho atual executando:
 
 ```sh
 $ git init
 ```
 
 <p style="background-color: orangered; padding: 1rem; color: white; font-weight: bold;">
-CAUTION: DO NOT INITIALIZE GIT UNLESS YOU WANT THAT FOLDER TO BE A GIT REPOSITORY.
+ATENÇÃO: NÃO INICIE O GIT A MENOS QUE VOCÊ QUEIRA QUE ESSA PASTA SEJA UM REPOSITÓRIO GIT.
 </p>
 
 <p style="background-color: orange; padding: 1rem; font-weight: bold;">
-WARNING: USUALLY YOU SHOULD NOT NEST GIT REPOSITORIES.
+AVISO: GERALMENTE VOCÊ NÃO DEVE ANINHAR REPOSITÓRIOS GIT.
 </p>
 
 <!-- livebook:{"break_markdown":true} -->
 
-### Your Turn
+### Sua vez
 
-Use the command line to create a new Git managed project called `git_example`.
+Use a linha de comando para criar um novo projeto gerenciado pelo Git chamado `git_example`.
 
-You can use `git status` from the command line from the `git_example` folder to verify that Git manages the folder. Like so:
+Você pode usar `git status` na linha de comando da pasta `git_example` para verificar se o Git gerencia a pasta. Assim:
 
 ```sh
 $ git init
@@ -121,59 +119,59 @@ No commits yet
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-## Staging And Committing Changes
+## Fazendo Staging e Commit de Alterações
 
-Git allows you to save your changes in a commit. Changes go from **untracked** to **staged** to **committed**.
+O Git permite que você salve suas alterações em um commit. As alterações passam de **não rastreadas** para **em staging** para **comitadas**.
 
 ```mermaid
 flowchart LR
   Untracked --git add--> Staged --git commit--> Committed
 ```
 
-You'll use some common commands for saving changes in Git.
+Você usará alguns comandos comuns para salvar alterações no Git.
 
-* `git status`: Display Git information and see the untracked and staged changes.
-* `git add`: Stage current changes.
-* `git commit`: Save staged changes into a commit.
+* `git status`: Exibir informações do Git e ver as alterações não rastreadas e em staging.
+* `git add`: Colocar as alterações atuais em staging.
+* `git commit`: Salvar alterações em staging em um commit.
 
-Putting that all together looks like this if run from the project folder. The `git status` commands are optional.
+Colocando tudo isso junto, parece assim se for executado a partir da pasta do projeto. Os comandos `git status` são opcionais.
 
 ```
 $ git status
 $ git add .
 $ git status
-$ git commit -m "example commit message"
+$ git commit -m "mensagem de commit exemplo"
 $ git status
 ```
 
 <!-- livebook:{"break_markdown":true} -->
 
-### Your Turn
+### Sua vez
 
-You're going to stage and commit some changes in the `github_example` project.
+Você vai fazer staging e commit de algumas alterações no projeto `github_example`.
 
-In the `github_example` create an empty file named `finished.txt`.
+No `github_example`, crie um arquivo vazio chamado `finished.txt`.
 
-Use `git add`, and `git commit` to stage and commit the file. Make sure to check the status between each step with `git status` to see how staged and unstaged files are displayed in the terminal.
+Use `git add` e `git commit` para fazer staging e commit do arquivo. Certifique-se de verificar o status entre cada passo com `git status` para ver como os arquivos em staging e não rastreados são exibidos no terminal.
 
-## Cloning Repositories
+## Clonando Repositórios
 
-You can clone remote repositories to create a local Git project on your computer.
+Você pode clonar repositórios remotos para criar um projeto Git local no seu computador.
 
 ```mermaid
 flowchart LR
-Remote --git clone--> Local
+Remoto --git clone--> Local
 ```
 
-There are many methods for cloning a remote repository onto your computer.
+Existem muitos métodos para clonar um repositório remoto no seu computador.
 
 <!-- livebook:{"break_markdown":true} -->
 
-### Cloning With The Command Line
+### Clonando com a Linha de Comando
 
-Many developers prefer using the command line using either HTTP, SSH, or the GitHub CLI.
+Muitos desenvolvedores preferem usar a linha de comando usando HTTP, SSH ou o GitHub CLI.
 
-You can find instructions for each method on GitHub:
+Você pode encontrar instruções para cada método no GitHub:
 
 * [HTTPS](https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls)
 * [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
@@ -183,14 +181,11 @@ You can find instructions for each method on GitHub:
 
 #### HTTPS
 
-HTTPS (Hypertext Transfer Protocol Secure) is a method of transferring data.
-In this case, we use it to copy files from the GitHub remote repository onto our local computer.
+HTTPS (Protocolo Seguro de Transferência de Hipertexto) é um método de transferência de dados. Neste caso, usamos para copiar arquivos do repositório remoto do GitHub para o nosso computador local.
 
-More practically, it's the easiest method for the command line however the downside is it's less secure and requires
-you to enter your GitHub credentials every time you use a `git` command.
+Mais praticamente, é o método mais fácil para a linha de comando, no entanto, a desvantagem é que é menos seguro e requer que você insira suas credenciais do GitHub toda vez que usa um comando `git`.
 
-We use `git clone` with the URL provided by GitHub to clone the repo with HTTPS.
-![](images/git_clone_https_github.png)
+Usamos `git clone` com a URL fornecida pelo GitHub para clonar o repositório com HTTPS.
 
 ```sh
 $ git clone https://github.com/BrooklinJazz/github_example.git
@@ -198,8 +193,7 @@ $ git clone https://github.com/BrooklinJazz/github_example.git
 
 <!-- livebook:{"break_markdown":true} -->
 
-However, you'll need to enter credentials every time you use `git push` or any other `git` command that
-interacts with a remote repository.
+No entanto, você precisará inserir credenciais toda vez que usar `git push` ou qualquer outro comando `git` que interaja com um repositório remoto.
 
 ```sh
 $ git push
@@ -207,30 +201,26 @@ Username for 'https://github.com':
 Password for 'https://a@github.com':
 ```
 
-HTTP is tedious for projects that you use regularly unless you setup your machine to remember your git credentials for you.
+HTTP é tedioso para projetos que você usa regularmente, a menos que você configure sua máquina para lembrar suas credenciais git para você.
 
 <!-- livebook:{"break_markdown":true} -->
 
 ### SSH
 
-SSH is more secure than HTTPS and doesn't require a username or password for authentication. Instead
-it uses an SSH Key stored locally on your computer.
+SSH é mais seguro do que HTTPS e não requer um nome de usuário ou senha para autenticação. Em vez disso, usa uma chave SSH armazenada localmente no seu computador.
 
-However, it's more complex to setup. If you wish to use SSH, follow the instructions
-to [connect to github with ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+No entanto, é mais complexo de configurar. Se você deseja usar SSH, siga as instruções para [conectar ao github com ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
-You'll want to follow the instructions for:
+Você vai querer seguir as instruções para:
 
-* [About SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) (optional)
-* [Checking for existing SSH keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys) (optional)
-* [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-* [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-* [Testing your SSH connection](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
-* [Working with SSH key passphrases](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases) (optional)
+* [Sobre SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/about-ssh) (opcional)
+* [Verificando chaves SSH existentes](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys) (opcional)
+* [Gerando uma nova chave SSH e adicionando-a ao agente ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+* [Adicionando uma nova chave SSH à sua conta GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+* [Testando sua conexão SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/testing-your-ssh-connection)
+* [Trabalhando com senhas de chave SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/working-with-ssh-key-passphrases) (opcional)
 
-Then you can use the `git clone` with the SSH URL provided.
-
-![](images/github_clone_ssh.png)
+Então você pode usar o `git clone` com a URL SSH fornecida.
 
 ```sh
 $ git clone git@github.com:BrooklinJazz/github_example.git
@@ -240,19 +230,17 @@ $ git clone git@github.com:BrooklinJazz/github_example.git
 
 ### GitHub CLI
 
-The GitHub CLI provides some conveniences for working with Git and GitHub.
-It allows you to use the command line
-to accomplish tasks that would normally require GitHub.
+O GitHub CLI oferece algumas conveniências para trabalhar com Git e GitHub. Ele permite que você use a linha de comando para realizar tarefas que normalmente exigiriam o GitHub.
 
-It's beyond the scope of this course, but you can [learn more here](https://github.com/cli/cli).
+Está além do escopo deste curso, mas você pode [aprender mais aqui](https://github.com/cli/cli).
 
 <!-- livebook:{"break_markdown":true} -->
 
-### Your Turn
+### Sua vez
 
-Clone your `github_example` project onto your computer under a new name `github_example2`.
+Clone seu projeto `github_example` em seu computador com um novo nome `github_example2`.
 
-To clone a project under a new name provide a new name to the `git clone` command.
+Para clonar um projeto com um novo nome, forneça um novo nome ao comando `git clone`.
 
 ```
 $ git clone <url> github_example2
@@ -260,15 +248,15 @@ $ git clone <url> github_example2
 
 ## Branches
 
-By default, all Git changes happen on the `main` branch. We can create other **local** or **remote** branches for grouping changes together. Typically, we'll create a feature branch to group related changes together.
+Por padrão, todas as alterações do Git acontecem na branch `main`. Podemos criar outras branches **locais** ou **remotas** para agrupar alterações. Normalmente, criaremos uma branch de recurso para agrupar alterações relacionadas.
 
-`git checkout -b` creates a new branch.
+`git checkout -b` cria uma nova branch.
 
 ```
 $ git checkout -b example-feature-branch-name
 ```
 
-It can also switch from the current branch to another existing branch.
+Ele também pode alternar da branch atual para outra branch existente.
 
 ```
 $ git checkout main
@@ -291,9 +279,9 @@ gitGraph
 
 <!-- livebook:{"break_markdown":true} -->
 
-### Merging Local Changes
+### Mesclando alterações locais
 
-We can merge changes from one local branch to another with `git merge`.
+Podemos mesclar alterações de uma branch local para outra com `git merge`.
 
 ```mermaid
 ---
@@ -312,7 +300,7 @@ gitGraph
    commit
 ```
 
-We have to checkout into the branch we want to merge changes into. Here's an example flow:
+Temos que fazer checkout na branch em que queremos mesclar as alterações. Aqui está um exemplo de fluxo:
 
 <!-- livebook:{"force_markdown":true} -->
 
@@ -325,32 +313,30 @@ $ git merge feature-branch
 
 <!-- livebook:{"break_markdown":true} -->
 
-### Pushing And Pulling Changes
+### Empurrando e puxando alterações
 
-We can push changes from a local branch to a remote branch, and pull changes from a remote branch to a local branch using `git pull` and `git push`.
+Podemos empurrar alterações de uma branch local para uma branch remota e puxar alterações de uma branch remota para uma branch local usando `git pull` e `git push`.
 
 ```
 $ git pull
 $ git push
 ```
 
-The first time we push a change, we need to connect the local and remote branch using `--set-upstream`.
+A primeira vez que empurramos uma alteração, precisamos conectar a branch local e remota usando `--set-upstream`.
 
 <!-- livebook:{"force_markdown":true} -->
 
 ```elixir
 $ git push --set-upstream origin <branchname>
-# Or -u For Shorthant.
+# Ou -u para abreviar.
 $ git push -u origin <branchname>
 ```
 
 <!-- livebook:{"break_markdown":true} -->
 
-### Merging Remote Changes (Making A Pull Request)
+### Mesclando Alterações Remotas (Fazendo um Pull Request)
 
-To merge remote branches, we use [create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) on GitHub accept the pull request to merge one remote branch with another. Note, this does not update local branches. These changes need to be pulled to the corresponding local branch.
-
-<!-- livebook:{"force_markdown":true} -->
+Para mesclar branches remotas, usamos [criar um pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) no GitHub e aceitamos o pull request para mesclar uma branch remota com outra. Note que isso não atualiza as branches locais. Essas alterações precisam ser puxadas para a branch local correspondente.
 
 ```elixir
 $ git checkout -b feature-branch
@@ -362,14 +348,14 @@ $ git checkout main
 $ git pull
 ```
 
-Here's a diagram of the complete flow.
+Aqui está um diagrama do fluxo completo.
 
 ```mermaid
 sequenceDiagram
-participant LM as Local Main
-participant LF as Local Feature
-participant RF as Remote Feature
-participant RM as Remote Main
+participant LM as Main Local
+participant LF as Feature Local
+participant RF as Feature Remota
+participant RM as Main Remota
 
 Note right of LM: git checkout -b feature-branch
 LM --> LF: checkout
@@ -389,51 +375,49 @@ RM ->> LM: pull changes
 
 <!-- livebook:{"break_markdown":true} -->
 
-### Your Turn
+### Sua vez
 
-Create a `feature-branch` in your `github_example` project.
+Crie uma `feature-branch` no seu projeto `github_example`.
 
-1. **local**: stage, commit, and merge some local changes to `main`.
-2. **remote**: stage, commit, and push some changes to a remote branch. Make a pull request and merge it into the remove `main` branch. Once merged, pull the changes to your local `main` branch.
+1. **local**: faça stage, commit e merge de algumas alterações locais para `main`.
+2. **remoto**: faça stage, commit e push de algumas alterações para uma branch remota. Faça um pull request e merge para a branch `main` remota. Uma vez mesclada, puxe as alterações para a sua branch `main` local.
 
-## Branching Strategies
+## Estratégias de Branching
 
-### Trunk-Based Development
+### Desenvolvimento Baseado em Branch
 
 <!-- livebook:{"break_markdown":true} -->
 
-Source control allows us to store different versions of the project. Typically there is a main branch for the latest version of the project.
+O controle de versão nos permite armazenar diferentes versões do projeto. Normalmente, existe uma branch principal para a versão mais recente do projeto.
 
-The most straightforward source control strategy only uses a main branch. Developers can push and pull from the main branch to get
-the latest changes.
+A estratégia de controle de versão mais direta usa apenas uma branch principal. Os desenvolvedores podem fazer push e pull da branch principal para obter as últimas alterações.
 
 ```mermaid
 sequenceDiagram
-    actor D1 as Developer 1
-    participant R as Main
-    actor D2 as Developer 2
-    D1->> R: pushes changes
-    R->> D2: pull changes
-    D2->> R: push changes
-    R->> D1: pulls changes
+    actor D1 as Desenvolvedor 1
+    participant R as Principal
+    actor D2 as Desenvolvedor 2
+    D1->> R: faz push das alterações
+    R->> D2: puxa (pull) as alterações
+    D2->> R: faz push das alterações
+    R->> D1: puxa (pull) as alterações
 ```
 
-It's convenient and fast. However, it lacks any review system for code changes. Therefore it's potentially excellent for small projects with highly trusted team members, but can be less effective for large projects requiring code review or multiple stages of testing.
+É conveniente e rápido. No entanto, não possui um sistema de revisão para alterações de código. Portanto, é potencialmente excelente para pequenos projetos com membros da equipe altamente confiáveis, mas pode ser menos eficaz para grandes projetos que exigem revisão de código ou vários estágios de teste.
 
 <!-- livebook:{"break_markdown":true} -->
 
-### Dev -> -> QA -> Staging -> Prod Pipelines
+### Pipelines Dev -> QA -> Staging -> Prod
 
-Some companies will have many stages of review for changes.
+Algumas empresas terão muitos estágios de revisão para as alterações.
 
-There is no universal strategy. Each project may have a different pipeline.
-However, some common steps include:
+Não existe uma estratégia universal. Cada projeto pode ter um pipeline diferente. No entanto, algumas etapas comuns incluem:
 
-* **Feature Branch**: A branch containing one specific change.
-* **Development**: Developer testing and integration branch.
-* **Quality Assurance (QA)**: Quality Assurance testing branch.
-* **Staging**: Approved changes ready for production but not yet deployed.
-* **Main**: The latest available version of the project.
+* **Branch de Feature**: Uma branch contendo uma alteração específica.
+* **Desenvolvimento**: Branch de teste e integração do desenvolvedor.
+* **Garantia de Qualidade (QA)**: Branch de teste de garantia de qualidade.
+* **Staging**: Alterações aprovadas prontas para produção, mas ainda não implantadas.
+* **Main**: A versão mais recente disponível do projeto.
 
 ```mermaid
 ---
@@ -458,31 +442,28 @@ gitGraph
   merge production
 ```
 
-## Merge Conflicts
+## Conflitos de Merge
 
-Source control allows us to develop our own version of the project isolated to our local version.
-However, if two developers edit the same file, it's possible to have conflicts.
+O controle de versão nos permite desenvolver nossa própria versão do projeto isolada para a nossa versão local. No entanto, se dois desenvolvedores editarem o mesmo arquivo, é possível ter conflitos.
 
-These conflicts need to be manually resolved. It's often easiest to [resolve conflicts using GitHub Desktop](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github)
-or with Visual Studio Code.
+Esses conflitos precisam ser resolvidos manualmente. Muitas vezes é mais fácil [resolver conflitos usando o GitHub Desktop](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github) ou com o Visual Studio Code.
 
 <!-- livebook:{"break_markdown":true} -->
 
 ![](images/resolve_conflicts_vsc.png)
 
-## Further Reading
+## Leitura Adicional
 
-Consider the following resource(s) to deepen your understanding of the topic.
+Considere o(s) seguinte(s) recurso(s) para aprofundar seu entendimento do tópico.
 
-* [Git Documentation and Guides](https://git-scm.com/)
-* [GitHub Documentation and Guides](https://docs.github.com/en)
+* [Documentação e Guias do Git](https://git-scm.com/)
+* [Documentação e Guias do GitHub](https://docs.github.com/en)
 
-## Commit Your Progress
+## Commit do Seu Progresso
 
-DockYard Academy now recommends you use the latest [Release](https://github.com/DockYard-Academy/curriculum/releases) rather than forking or cloning our repository.
+A DockYard Academy agora recomenda que você use a última [Release](https://github.com/DockYard-Academy/curriculum/releases) em vez de fazer fork ou clonar nosso repositório.
 
-Run `git status` to ensure there are no undesirable changes.
-Then run the following in your command line from the `curriculum` folder to commit your progress.
+Execute `git status` para garantir que não haja alterações indesejáveis. Em seguida, execute o seguinte na linha de comando da pasta `curriculum` para fazer commit do seu progresso.
 
 ```
 $ git add .
@@ -490,25 +471,24 @@ $ git commit -m "finish Git reading"
 $ git push
 ```
 
-We're proud to offer our open-source curriculum free of charge for anyone to learn from at their own pace.
+Estamos orgulhosos de oferecer nosso currículo de código aberto gratuitamente para qualquer pessoa aprender no seu próprio ritmo.
 
-We also offer a paid course where you can learn from an instructor alongside a cohort of your peers.
-We will accept applications for the June-August 2023 cohort soon.
+Também oferecemos um curso pago onde você pode aprender com um instrutor ao lado de um grupo de seus pares. Aceitaremos inscrições para a turma de junho-agosto de 2023 em breve.
 
-## Navigation
+## Navegação
 
 <div style="display: flex; align-items: center; width: 100%; justify-content: space-between; font-size: 1rem; color: #61758a; background-color: #f0f5f9; height: 4rem; padding: 0 1rem; border-radius: 1rem;">
 <div style="display: flex;">
 <i class="ri-home-fill"></i>
-<a style="display: flex; color: #61758a; margin-left: 1rem;" href="../start.livemd">Home</a>
+<a style="display: flex; color: #61758a; margin-left: 1rem;" href="../start.livemd">Início</a>
 </div>
 <div style="display: flex;">
 <i class="ri-bug-fill"></i>
-<a style="display: flex; color: #61758a; margin-left: 1rem;" href="https://github.com/DockYard-Academy/curriculum/issues/new?assignees=&labels=&template=issue.md&title=Git">Report An Issue</a>
+<a style="display: flex; color: #61758a; margin-left: 1rem;" href="https://github.com/DockYard-Academy/curriculum/issues/new?assignees=&labels=&template=issue.md&title=Git">Reportar um Problema</a>
 </div>
 <div style="display: flex;">
 <i class="ri-arrow-left-fill"></i>
-<a style="display: flex; color: #61758a; margin-left: 1rem;" href="../reading/command_line.livemd">Command Line</a>
+<a style="display: flex; color: #61758a; margin-left: 1rem;" href="../reading/command_line.livemd">Linha de Comando</a>
 </div>
 <div style="display: flex;">
 <a style="display: flex; color: #61758a; margin-right: 1rem;" href="../reading/livebook.livemd">Livebook</a>

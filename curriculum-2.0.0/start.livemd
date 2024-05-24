@@ -24,7 +24,7 @@ Para novos alunos, recomendamos que você [comece aqui](reading/start_here.livem
 
 * Leitura
   * [X] [Linha de Comando](reading/command_line.livemd)
-  * [ ] [Git](reading/git.livemd)
+  * [X] [Git](reading/git.livemd)
   * [ ] [Livebook](reading/livebook.livemd)
   * [ ] [Editores de Código](reading/code_editors.livemd)
   * [ ] [IEx](reading/iex.livemd)
